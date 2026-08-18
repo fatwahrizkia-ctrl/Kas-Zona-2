@@ -1,1 +1,16 @@
-<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kas Anggota</title><link rel="stylesheet" href="style.css"></head><body><main><header><h1>Kas Anggota</h1><p>Data pembayaran dan pengeluaran bulanan</p></header><section class="card"><div class="top"><label>Bulan <input id="month" type="month"></label><button id="adminBtn" onclick="toggleAdmin()">Edit sebagai Admin</button></div><p id="status"></p></section><section class="stats"><div><small>Saldo awal</small><b id="opening">Rp0</b></div><div><small>Total masuk</small><b id="income">Rp0</b></div><div><small>Pengeluaran</small><b id="expense">Rp0</b></div><div><small>Saldo akhir</small><b id="balance">Rp0</b></div></section><section class="card"><h2>Pembayaran Anggota</h2><p>Tarif standar: Rp10.000 per orang.</p><div id="members"></div><button class="admin-only" hidden onclick="savePayments()">Simpan pembayaran</button></section><section class="card"><h2>Pengeluaran</h2><form class="admin-only" hidden onsubmit="addExpense(event)"><input id="expenseName" required placeholder="Nama pengeluaran"><input id="expenseAmount" required type="number" min="1" placeholder="Nominal"><input id="expenseNote" placeholder="Keterangan"><button>Tambah pengeluaran</button></form><div id="expenses"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script></body></html>
+<!doctype html><html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Ubah judul tab browser di sini -->
+    <title>Kas Zona 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <!-- Ubah judul utama web di sini -->
+            <h1>Kas Zona 2</h1>
+            <p>Data pembayaran dan pengeluaran bulanan</p>
+        </header>
+            <section class="card"><div class="top"><label>Bulan <input id="month" type="month"></label><button id="adminBtn" onclick="toggleAdmin()">Edit sebagai Admin</button></div><p id="status"></p></section><section class="stats"><div><small>Saldo awal</small><b id="opening">Rp0</b></div><div><small>Total masuk</small><b id="income">Rp0</b></div><div><small>Pengeluaran</small><b id="expense">Rp0</b></div><div><small>Saldo akhir</small><b id="balance">Rp0</b></div></section><section class="card"><h2>Pembayaran Anggota</h2><p>Tarif standar: Rp10.000 per orang.</p><div id="members"></div><button class="admin-only" hidden onclick="savePayments()">Simpan pembayaran</button></section><section class="card"><h2>Pengeluaran</h2><form class="admin-only" hidden onsubmit="addExpense(event)"><input id="expenseName" required placeholder="Nama pengeluaran"><input id="expenseAmount" required type="number" min="1" placeholder="Nominal"><input id="expenseNote" placeholder="Keterangan"><button>Tambah pengeluaran</button></form><div id="expenses"></div></section></main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="app.js"></script></body></html>
